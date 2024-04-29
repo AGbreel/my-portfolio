@@ -1,0 +1,55 @@
+/* Small */
+@media screen and (min-width: 640px) {}
+
+/* Medium */
+@media screen and (min-width: 768px) {
+    header .container .menu {
+        display: none;
+    }
+
+    header .container nav ul {
+        display: flex;
+    }
+
+    section {
+        height: 90vh;
+    }
+
+    section .container span {
+        font-size: 3rem;
+    }
+
+
+    section .container .content {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        text-align: start;
+    }
+
+    section .container .border .photo {
+        width: 20rem;
+    }
+
+    section .container .about {
+        width: 50%;
+    }
+
+    section .container .about h1 {
+        font-size: 4rem;
+        width: 15rem;
+        margin: 0;
+    }
+
+    section .container span {
+        top: 30px;
+    }
+}
+
+/* Large */
+@media screen and (min-width: 1024px) {}
+
+/* XLarge */
+@media screen and (min-width: 1280px) {}
+
+/* 2XLarge*/
+@media screen and (min-width: 1536px) {}

@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1F2328;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =================================== */
+/* Start Header */
+header .container .menu {
+    position: relative;
+    z-index: 10;
+}
+
+header .container .menu i {
+    font-size: 2rem;
+}
+
+header .container .menu ul {
+    display: none;
+    background-color: black;
+    border: 3px solid #E74C3C;
+    position: absolute;
+    right: 0;
+    min-width: 150px;
+    top: calc(100% + 15px);
+}
+
+header .container .menu ul::before {
+    content: "";
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent #E74C3C transparent;
+    position: absolute;
+    right: 0px;
+    top: -25px;
+}
+
+header .container .menu:hover ul {
+    display: block;
+}
+
+header .menu ul li {
+    font-size: 1.5rem;
+}
+
+header .menu ul li a {
+    display: block;
+    padding: 15px;
+    color: #E74C3C;
+    transition: 0.3s;
+}
+
+header .menu ul li:hover a {
+    padding-left: 25px;
+}
+
+header .menu ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+
+/*  */
+
+header .container nav ul {
+    display: none;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E74C3C;
+}
+
+header .container .logo img {
+    width: 50%;
+}
+
+header .container nav li:not(:last-child) {
+    margin-right: 40px;
+}
+
+header .container nav li:last-child {
+    margin-right: 10px;
+}
+
+header .container nav li {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    transition: 0.5s;
+}
+
+header .container nav li:hover {
+    color: #fff;
+}
+
+header .container nav li::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #E74C3C;
+    transition: 0.5s;
+}
+
+header .container nav li:hover::after {
+    width: 100%;
+}
+
+/* End Header */
+/* ============================================ */
+/* Start Section */
+section {
+    height: 110vh;
+}
+
+section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section .container span {
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+}
+
+section .container span::after {
+    content: '|';
+    color: #E74C3C;
+    animation: typing 5s infinite;
+}
+
+/* DEVELOPER */
+/* DESIGNER */
+
+@keyframes typing {
+    0% {
+        content: " D|";
+    }
+
+    5% {
+        content: " De|";
+    }
+
+    10% {
+        content: " Deve|";
+    }
+
+    15% {
+        content: " Develo|";
+    }
+
+    20% {
+        content: " Develop|";
+    }
+
+    25% {
+        content: " Developer|";
+    }
+
+    30% {
+        content: " Develop|";
+    }
+
+    35% {
+        content: " Develo|";
+    }
+
+    40% {
+        content: " Deve|";
+    }
+
+    45% {
+        content: " De|";
+    }
+
+    50% {
+        content: "|";
+    }
+
+    55% {
+        content: " D|";
+    }
+
+    60% {
+        content: " De|";
+    }
+
+    65% {
+        content: " Desi|";
+    }
+
+    70% {
+        content: " Design|";
+    }
+
+    75% {
+        content: " Designer|";
+    }
+
+    80% {
+        content: " Design|";
+    }
+
+    85% {
+        content: " Desi|";
+    }
+
+    90% {
+        content: " De|";
+    }
+
+    95% {
+        content: " D|";
+    }
+
+    100% {
+        content: "|";
+    }
+
+}
+
+section .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+section .container .border {
+    border: 8px solid #E74C3C;
+    border-radius: 8px;
+    position: relative;
+    margin: auto 0;
+}
+
+section .container .border .photo img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+section .container .border .photo {
+    width: 15rem;
+    border-radius: 10px;
+    position: relative;
+    left: 30px;
+    top: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: teal;
+}
+
+section .container .border .photo:hover img {
+    transform-origin: top;
+    transform: scale(1.3);
+}
+
+section .container .border .photo .layer {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section .container .border .photo:hover .layer {
+    top: 0;
+}
+
+section .container .border .photo .layer i {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+section .container .border .photo .layer i:hover {
+    color: #E74C3C;
+}
+
+section .container .about {
+    width: 85%;
+    margin: 30px 0;
+}
+
+section .container .about h1 {
+    margin: 0 auto;
+    font-size: 3rem;
+    width: 20rem;
+    text-transform: capitalize;
+    color: #E74C3C;
+}
+
+section .container .about p {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+/* End Section */
